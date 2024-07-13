@@ -39,4 +39,5 @@ export const readerFonts: Font[] = [
   { fontFamily: 'lato', name: 'Lato' },
   { fontFamily: 'pt-serif', name: 'PT Serif' },
   { fontFamily: 'OpenDyslexic3-Regular', name: 'OpenDyslexic' },
+  { fontFamily: 'comicSans', name: 'Comic Sans'},
 ];
