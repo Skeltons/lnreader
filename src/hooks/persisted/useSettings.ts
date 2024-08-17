@@ -85,6 +85,8 @@ export interface ChapterGeneralSettings {
   verticalSeekbar: boolean;
   removeExtraParagraphSpacing: boolean;
   bionicReading: boolean;
+  tapToScroll: boolean;
+  TTSEnable: boolean;
 }
 
 export interface ReaderTheme {
@@ -174,6 +176,8 @@ export const initialChapterGeneralSettings: ChapterGeneralSettings = {
   verticalSeekbar: true,
   removeExtraParagraphSpacing: false,
   bionicReading: false,
+  tapToScroll: false,
+  TTSEnable: false,
 };
 
 export const initialChapterReaderSettings: ChapterReaderSettings = {
@@ -181,7 +185,7 @@ export const initialChapterReaderSettings: ChapterReaderSettings = {
   textColor: '#CCCCCC',
   textSize: 16,
   textAlign: 'left',
-  padding: 4,
+  padding: 16,
   fontFamily: '',
   lineHeight: 1.5,
   customCSS: '',
