@@ -18,7 +18,7 @@ const ReadButton = ({
 }: ReadButtonProps) => {
   const { useFabForContinueReading = false } = useAppSettings();
 
-  const readFirstChapter = () => {
+  const firstChapterOnTop = () => {
     return (
       chapters[0].chapterNumber! <= chapters[chapters.length - 1].chapterNumber!
     );
@@ -27,7 +27,7 @@ const ReadButton = ({
     if (lastRead) {
       navigateToChapter(lastRead);
     } else if (chapters.length) {
-      readFirstChapter()
+      firstChapterOnTop()
         ? navigateToChapter(chapters[0])
         : navigateToChapter(chapters[chapters.length - 1]);
     }
@@ -40,7 +40,7 @@ const ReadButton = ({
           lastRead
             ? `${getString('novelScreen.continueReading')} ${lastRead.name}`
             : getString('novelScreen.startReadingChapters', {
-                name: readFirstChapter()
+                name: firstChapterOnTop()
                   ? chapters[0].name
                   : chapters[chapters.length - 1].name,
               })
