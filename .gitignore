@@ -78,4 +78,4 @@ src/sources/en/generators/
 *.lockb
 .tool-versions
 
-*/android/*
+**/android/*
