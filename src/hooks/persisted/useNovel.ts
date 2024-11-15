@@ -350,6 +350,7 @@ export const useNovel = (novelPath: string, pluginId: string) => {
       setPages(['1']);
     }
     setNovel(novel);
+    setLoading(false);
   }, []);
 
   const getChapters = useCallback(async () => {
@@ -379,11 +380,12 @@ export const useNovel = (novelPath: string, pluginId: string) => {
       }
       setChapters(chapters);
     }
-    setLoading(false);
   }, [novel, novelSettings, pageIndex]);
+
   useEffect(() => {
     getNovel();
   }, []);
+
   useEffect(() => {
     getChapters().catch(e => showToast(e.message));
   }, [getChapters]);
